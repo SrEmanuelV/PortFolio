@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+   /* background-image: linear-gradient(to right, var(--color-negro), var(--color-dorado));*/
+    /* Define el degradado lineal desde el color negro hasta el dorado, de arriba hacia abajo */
+  }
+  
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+:root {
+    --color-negro: #222222;
+    --color-dorado: #FFD700;
+  }
+
+  header{
+    width: 100vw;
+    padding: 20px;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-image: linear-gradient(to right, var(--color-negro), var(--color-dorado));
+  }
+
+  header h1{
+    margin-left: 80px;
+    color: white;
+  }
+
+  header .menu{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  header .menu a {
+    padding: 10px 20px;
+    border-radius: 50px;
+    margin-left: 20px;
+}
+
+header .menu a:hover {
+    background-image: linear-gradient(to right, var(--color-dorado), var(--color-negro)); /* Cambia el color de fondo al dorado en hover */
+    color: white; /* Cambia el color del texto a blanco */
+    transition: 1s;
+}
+
+header .contact{
+    margin-left: auto;
+    font-size: 19px;
+  }
+
+header .contact a{
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+header .contact a:hover{
+    background-image: linear-gradient(to bottom, var(--color-dorado), var(--color-negro)); /* Cambia el color de fondo al dorado en hover */
+    color: white; /* Cambia el color del texto a blanco */
+    transition: 1s;
+}
