@@ -1,0 +1,184 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+   /* background-image: linear-gradient(to right, var(--color-negro), var(--color-dorado));*/
+    /* Define el degradado lineal desde el color negro hasta el dorado, de arriba hacia abajo */
+  }
+  
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+:root {
+    --color-negro: #222222;
+    --color-dorado: #FFD700;
+  }
+
+  header {
+    width: 100%;
+    padding: 20px;
+    height: 80px;
+    display: flex;
+    justify-content: space-between; /* Alinea los elementos a los extremos del contenedor */
+    align-items: center;
+    background-image: linear-gradient(to right, var(--color-negro), var(--color-dorado), #00bf88);
+  }
+
+  header h1{
+    margin-left: 80px;
+    color: white;
+  }
+
+  header .menu{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  header .menu a {
+    padding: 10px 20px;
+    border-radius: 50px;
+    margin-left: 20px;
+}
+
+header .menu a:hover {
+    background-image: linear-gradient(to right, var(--color-dorado), var(--color-negro)); /* Cambia el color de fondo al dorado en hover */
+    color: white; /* Cambia el color del texto a blanco */
+    transition: 1s;
+}
+
+header .contact{
+    margin-left: auto;
+    font-size: 19px;
+  }
+
+header .contact a{
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+header .contact a:hover{
+    background-image: linear-gradient(to bottom, var(--color-dorado), var(--color-negro)); /* Cambia el color de fondo al dorado en hover */
+    color: white; /* Cambia el color del texto a blanco */
+    transition: 1s;
+}
+
+.container{
+  width: 100%;
+  word-wrap: break-word;
+  overflow: hidden;
+  height: 650px;
+  background-image: linear-gradient(to right, var(--color-negro), var(--color-dorado), #00bf88);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header .menu-adaptive {
+  display: none;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+.container .title{
+  margin-top: -150px;
+  font-size: 29px;
+  margin-bottom: 50px;
+}
+
+.container .informacion{
+  width: 600px;
+  height: auto;
+  text-align: center;
+  
+}
+
+.container .informacion a{
+  display: inline-block;
+  margin-top: 35px;
+  padding: 10px 20px;
+  background-color: var(--color-negro);
+  width: 150px;
+  border-radius: 20px;
+  color: var(--color-dorado);
+  font-size: 20px;
+  text-align: center;
+}
+
+.container .informacion a:hover{
+  background-color: #111;
+  color: #FFD599;
+  transition: 0.2s;
+}
+
+.menu-adaptive-modal {
+  display: none;
+  position: fixed; /* Cambiar a 'fixed' para mantener el modal fijo en la ventana */
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 788px){
+  #menuAdaptive{ 
+    display: flex;
+  }
+
+  header .menu, header .contact{
+    display: none;
+  }
+
+  .menu-adaptive-modal{
+    top: 0; /* Posicionar en la parte superior de la ventana */
+  left: 0; /* Posicionar en la parte izquierda de la ventana */
+  width: 100%; /* Ocupar todo el ancho de la ventana */
+  height: 100%; /* Ocupar toda la altura de la ventana */
+  background-color: #00bf88; /* Fondo semitransparente */
+  z-index: 999; /* Asegurar que esté por encima de otros elementos */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  }
+  
+  .menu-adaptive-modal a {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: black; /* Color del texto */
+    text-decoration: none; /* Quitar subrayado de los enlaces */
+    font-size: 18px; /* Tamaño de fuente */
+  }
+  
+  .menu-adaptive-modal a:hover {
+    background-image: linear-gradient(to left, var(--color-dorado), var(--color-negro)); /* Fondo semitransparente en hover */
+    color: white; /* Cambio de color de texto en hover */
+    transition: 0.3s; /* Efecto de transición suave */
+  }
+  
+  .close {
+    position: absolute; /* Posicionamiento absoluto para el botón de cerrar */
+    top: 20px; /* Posición desde la parte superior */
+    right: 20px; /* Posición desde la derecha */
+    cursor: pointer;
+    color: white; /* Color del texto */
+    font-size: 24px; /* Tamaño de fuente */
+  }
+
+  .container .informacion{
+    width: 70vw;
+  }
+
+  .container  .informacion a{
+    width: 120px;
+    font-size: 13px;
+    font-weight: bold;
+  }
+
+}
